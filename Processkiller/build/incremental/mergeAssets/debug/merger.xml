@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger>
+
+    <dataSet config="main" >
+        <source path="/Users/tw/program/androidStudioProjects/Processkiller/Processkiller/src/main/assets" />
+    </dataSet>
+    <dataSet config="debug" >
+        <source path="/Users/tw/program/androidStudioProjects/Processkiller/Processkiller/src/debug/assets" />
+    </dataSet>
+
+</merger>
