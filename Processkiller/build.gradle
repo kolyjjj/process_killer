@@ -7,14 +7,13 @@ buildscript {
     }
 }
 apply plugin: 'android'
-apply plugin: 'sonar-runner'
 
 dependencies {
     compile files('libs/android-support-v4.jar')
 }
 
 android {
-    compileSdkVersion 17
+    compileSdkVersion 16
     buildToolsVersion "17.0.0"
 
     defaultConfig {
