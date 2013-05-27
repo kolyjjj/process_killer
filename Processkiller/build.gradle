@@ -1,4 +1,3 @@
-apply plugin: 'android'
 
 buildscript {
     repositories {
@@ -9,17 +8,22 @@ buildscript {
     }
 }
 
+apply plugin: 'android'
+
 dependencies {
     compile files('libs/android-support-v4.jar')
-    'junit:junit:4.11'
 }
 
-android {
+    android {
     compileSdkVersion 17
     buildToolsVersion "17.0.0"
 
     defaultConfig {
         minSdkVersion 7
-        targetSdkVersion 16
+        targetSdkVersion 17
+
+        testPackageName "li.koly.processkiller"
+        testInstrumentationRunner "android.test.InstrumentationTestRunner"
     }
 }
+

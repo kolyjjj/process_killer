@@ -1,13 +1,13 @@
 package li.koly.processkiller;
 
-/**
- * Created by tw on 5/26/13.
- */
-public class MainActivityTest {
+import android.test.InstrumentationTestCase;
 
-    @Test
-    public void should_call_on_create(){
+public class MainActivityTest extends InstrumentationTestCase{
+
+    public void test_call_on_create(){
         MainActivity mainActivity = new MainActivity();
+
+        assertEquals(true, true);
     }
 
 }
