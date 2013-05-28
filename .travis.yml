@@ -1,30 +1,25 @@
 language: java
 script: "./gradlew build"
-jdk:
-  - oraclejdk6
-
-
-language: java
 jdk: oraclejdk7
 env:
   matrix:
-    # android-16 is always included
-    - ANDROID_SDKS=sysimg-16            ANDROID_TARGET=android-16  ANDROID_ABI=armeabi-v7a
+    # android-17 is always included
+    - ANDROID_SDKS=sysimg-17            ANDROID_TARGET=android-17  ANDROID_ABI=armeabi-v7a
 before_install:
   # Install base Android SDK
   - sudo apt-get update -qq
   - if [ `uname -m` = x86_64 ]; then sudo apt-get install -qq --force-yes libgd2-xpm ia32-libs ia32-libs-multiarch > /dev/null; fi
-  - wget http://dl.google.com/android/android-sdk_r22-linux.tgz
-  - tar xzf android-sdk_r22-linux.tgz
+  - wget http://dl.google.com/android/android-sdk_r23-linux.tgz
+  - tar xzf android-sdk_r23-linux.tgz
   - export ANDROID_HOME=$PWD/android-sdk-linux
   - echo ${ANDROID_HOME}
   - export PATH=${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools
   - echo $PATH
   
   # Gradle
-  - wget http://services.gradle.org/distributions/gradle-1.4-bin.zip
-  - unzip gradle-1.4-bin.zip
-  - export GRADLE_HOME=$PWD/gradle-1.4
+  - wget http://services.gradle.org/distributions/gradle-1.6-bin.zip
+  - unzip gradle-1.6-bin.zip
+  - export GRADLE_HOME=$PWD/gradle-1.6
   - export PATH=$GRADLE_HOME/bin:$PATH
   - echo $PATH
   - gradle -v
