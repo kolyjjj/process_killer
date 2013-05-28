@@ -10,11 +10,8 @@ buildscript {
 
 apply plugin: 'android'
 
-dependencies {
-    compile files('libs/android-support-v4.jar')
-}
 
-    android {
+android {
     compileSdkVersion 17
     buildToolsVersion "17.0.0"
 
@@ -24,6 +21,9 @@ dependencies {
 
         testPackageName "li.koly.processkiller.test"
         testInstrumentationRunner "android.test.InstrumentationTestRunner"
+    }
+    dependencies {
+        compile files('libs/android-support-v4.jar')
     }
 }
 
