@@ -1,5 +1,4 @@
 language: java
-script: "./gradlew build"
 jdk: oraclejdk7
 env:
   matrix:
@@ -47,3 +46,5 @@ before_install:
 #before_script:
   #- chmod +x wait_for_emulator
   #- ./wait_for_emulator
+  script:
+  - gradle build
