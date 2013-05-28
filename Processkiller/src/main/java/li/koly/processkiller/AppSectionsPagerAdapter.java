@@ -17,7 +17,7 @@ class AppSectionsPagerAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int i) {
         switch (i) {
             case 0:
-                return new LaunchpadSectionFragment();
+                return new KillFragment();
             default:
                 Fragment fragment = new DummySectionFragment();
                 Bundle args = new Bundle();

@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 /**
 * Created by tw on 5/28/13.
 */
-class LaunchpadSectionFragment extends Fragment {
+class KillFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_section_launchpad, container, false);
