@@ -1,6 +1,7 @@
-package li.koly.processkiller;
+package li.koly.processkiller.test;
 
 import android.test.InstrumentationTestCase;
+import li.koly.processkiller.MainActivity;
 
 public class MainActivityTest extends InstrumentationTestCase{
 

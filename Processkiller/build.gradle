@@ -22,7 +22,7 @@ dependencies {
         minSdkVersion 7
         targetSdkVersion 17
 
-        testPackageName "li.koly.processkiller"
+        testPackageName "li.koly.processkiller.test"
         testInstrumentationRunner "android.test.InstrumentationTestRunner"
     }
 }
