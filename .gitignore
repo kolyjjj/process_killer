@@ -22,3 +22,4 @@ local.properties
 #Gradle
 .gradle
 build/
+.DS_Store
