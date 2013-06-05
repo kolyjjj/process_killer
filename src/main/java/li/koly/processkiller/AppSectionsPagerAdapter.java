@@ -18,12 +18,15 @@ class AppSectionsPagerAdapter extends FragmentPagerAdapter {
         switch (i) {
             case 0:
                 return new KillFragment();
-            default:
-                Fragment fragment = new DummySectionFragment();
+            case 1:
+                Fragment fragment = new ProcessListSectionFragment();
                 Bundle args = new Bundle();
-                args.putInt(DummySectionFragment.ARG_SECTION_NUMBER, i + 1);
+                args.putInt(ProcessListSectionFragment.ARG_SECTION_NUMBER, i + 1);
                 fragment.setArguments(args);
                 return fragment;
+            default:
+                return new KillFragment();
+
         }
     }
 

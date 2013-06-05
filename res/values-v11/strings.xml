@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="running_apps_label_text">Running Apps</string>
+    <string name="process_item_kill_button_text">Kill Me</string>
+</resources>

@@ -13,5 +13,7 @@
     <string name="demo_external_activity">Demo External Activity</string>
     <string name="kill">Kill</string>
     <string name="demo_collection">Demo Collection</string>
+    <string name="running_apps_label_text">Running Apps</string>
+    <string name="process_item_kill_button_text">Kill Me</string>
 
 </resources>
