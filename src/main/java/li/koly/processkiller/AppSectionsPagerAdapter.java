@@ -1,13 +1,12 @@
 package li.koly.processkiller;
 
-import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 /**
-* Created by tw on 5/28/13.
-*/
+ * Created by tw on 5/28/13.
+ */
 class AppSectionsPagerAdapter extends FragmentPagerAdapter {
     public AppSectionsPagerAdapter(FragmentManager fm) {
         super(fm);
@@ -19,11 +18,7 @@ class AppSectionsPagerAdapter extends FragmentPagerAdapter {
             case 0:
                 return new KillFragment();
             case 1:
-                Fragment fragment = new ProcessListSectionFragment();
-                Bundle args = new Bundle();
-                args.putInt(ProcessListSectionFragment.ARG_SECTION_NUMBER, i + 1);
-                fragment.setArguments(args);
-                return fragment;
+                return new ProcessListSectionFragment();
             default:
                 return new KillFragment();
 
