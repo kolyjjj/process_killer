@@ -1,6 +1,7 @@
 package li.koly.processkiller;
 
 import android.app.ActivityManager;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -15,6 +16,7 @@ import java.util.HashMap;
 import java.util.List;
 
 import static android.content.Context.ACTIVITY_SERVICE;
+import static android.content.pm.PackageManager.GET_META_DATA;
 import static com.google.common.collect.Lists.newArrayList;
 
 /**
@@ -40,7 +42,7 @@ class ProcessListSectionFragment extends Fragment {
         for (ActivityManager.RunningAppProcessInfo appInfo : runningAppProcesses) {
             HashMap<String, Object> appInfoMap = Maps.newHashMap();
             appInfoMap.put("number", number);
-            appInfoMap.put("name", appInfo.processName);
+            appInfoMap.put("name", getApplicationLabelWithPackageName(appInfo.pkgList[0]));
             processList.add(appInfoMap);
             number += 1;
         }
@@ -49,5 +51,14 @@ class ProcessListSectionFragment extends Fragment {
                 processList, R.layout.process_list_layout,
                 new String[]{"number", "name"},
                 new int[]{R.id.process_item_number, R.id.process_item_name});
+    }
+
+    private CharSequence getApplicationLabelWithPackageName(String packageName) {
+        PackageManager pm = getActivity().getPackageManager();
+        try {
+            return pm.getApplicationLabel(pm.getApplicationInfo(packageName, GET_META_DATA));
+        } catch (PackageManager.NameNotFoundException e) {
+            throw new IllegalArgumentException("There is no application exists for:" + packageName);
+        }
     }
 }
