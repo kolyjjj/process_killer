@@ -26,13 +26,12 @@ android {
     }
     sourceSets {
         main {
-            manifest.srcFile 'AndroidManifest.xml'
+            manifest.srcFile 'src/main/AndroidManifest.xml'
             java.srcDirs = ['src/main/java']
-            resources.srcDirs = ['src/main/resources']
-            res.srcDirs = ['res']
+            res.srcDirs = ['src/main/res']
             assets.srcDirs = ['assets']
         }
-        instrumentTest.setRoot('tests')
+        instrumentTest.setRoot('src/instrumentTest/java')
     }
 
 
@@ -40,9 +39,6 @@ android {
     dependencies {
         compile fileTree(dir: 'libs', include: '*.jar')
         compile 'com.google.guava:guava:14.0.1'
-        instrumentTestCompile (
-                'junit:junit:4.11'
-        )
     }
 }
 
