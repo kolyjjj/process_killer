@@ -7,7 +7,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 /**
  * Created by tw on 5/28/13.
  */
-class AppSectionsPagerAdapter extends FragmentPagerAdapter {
+public class AppSectionsPagerAdapter extends FragmentPagerAdapter {
     public AppSectionsPagerAdapter(FragmentManager fm) {
         super(fm);
     }

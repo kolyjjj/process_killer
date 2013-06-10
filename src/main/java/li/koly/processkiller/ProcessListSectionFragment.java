@@ -22,7 +22,7 @@ import static com.google.common.collect.Lists.newArrayList;
 /**
  * Created by tw on 5/28/13.
  */
-class ProcessListSectionFragment extends Fragment {
+public class ProcessListSectionFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
